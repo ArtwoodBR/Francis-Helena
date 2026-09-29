@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#a94720" />
+  <meta
+    name="description"
+    content="The wedding invitation of Francis and Helena — 31 October 2026 at Subtle Class Event Centre."
+  />
+  <title>Francis & Helena | 31 October 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lightbox-download {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.8rem 1.2rem;
+      color: #271b15;
+      background: #fff;
+      font: 600 0.8rem Montserrat, sans-serif;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .lightbox-download:hover, .lightbox-download:focus-visible { background: #ead7a7; }
+    .lightbox img { max-height: 75vh; }
+  </style>
+
+</head>
+
+<body class="locked">
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Interactive envelope opening screen -->
+  <section id="envelope-screen" class="envelope-screen" aria-label="Open wedding invitation">
+    <div class="sparkles" aria-hidden="true"></div>
+
+    <div class="opening-copy">
+      <p class="eyebrow">You are invited to celebrate</p>
+      <h1>Francis <span>&</span> Helena</h1>
+      <p>31 October 2026</p>
+    </div>
+
+    <button id="open-envelope" class="envelope-button" type="button" aria-label="Open the invitation">
+      <span class="envelope" aria-hidden="true">
+        <span class="envelope-back"></span>
+        <span class="letter">
+          <span class="letter-monogram">F <i>&</i> H</span>
+          <span class="letter-small">You are invited</span>
+        </span>
+        <span class="envelope-front"></span>
+        <span class="envelope-flap"></span>
+        <span class="wax-seal">FH</span>
+      </span>
+      <span class="open-label">Click/Tap to open</span>
+    </button>
+  </section>
+
+  <main id="website" class="website" aria-hidden="true">
+    <header class="site-header">
+      <a href="#invitation" class="brand" aria-label="Francis and Helena home">
+        <span>F</span><i>&</i><span>H</span>
+      </a>
+
+      <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="#invitation" class="active">Invitation</a>
+        <a href="#story">Our Love Story</a>
+        <a href="#gallery">Our Pictures</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+    </header>
+
+    <!-- Invitation -->
+    <section id="invitation" class="hero section">
+      <div class="hero-overlay"></div>
+      <div class="floating-ring ring-one"></div>
+      <div class="floating-ring ring-two"></div>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow light">Together with their families</p>
+        <h2>Francis <span>&</span> Helena</h2>
+        <p class="hero-intro">joyfully invite you to celebrate their wedding</p>
+
+        <div class="date-display">
+          <span>Saturday</span>
+          <strong>31</strong>
+          <span>October · 2026</span>
+        </div>
+
+        <p class="venue">Venue - Subtle Class Event Centre, Ogbojo Koo Street</p>
+        <a href="#rsvp" class="button button-light">Confirm Attendance</a>
+      </div>
+
+      <a href="#countdown" class="scroll-cue" aria-label="Scroll to countdown">
+        <span></span>
+        Scroll
+      </a>
+    </section>
+
+    <!-- Countdown -->
+    <section id="countdown" class="countdown-section section">
+      <div class="ornament">F <span>&</span> H</div>
+      <p class="eyebrow">Counting down to forever</p>
+      <h2>The celebration begins in</h2>
+
+      <div class="countdown" aria-label="Wedding countdown">
+        <div><strong id="days">000</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hours</span></div>
+        <div><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+      <p id="countdown-message" class="countdown-message"></p>
+    </section>
+
+    <!-- Formal invitation -->
+    <section class="formal-invitation section">
+      <div class="invitation-card reveal">
+        <div class="corner corner-top-left"></div>
+        <div class="corner corner-top-right"></div>
+        <div class="corner corner-bottom-left"></div>
+        <div class="corner corner-bottom-right"></div>
+
+        <p class="eyebrow">The honour of your presence is requested</p>
+        <h2>Francis <span>&</span> Helena</h2>
+        <p class="script-line">as they begin their forever together</p>
+
+        <div class="invitation-details">
+          <div>
+            <small>Date</small>
+            <strong>31 October 2026</strong>
+          </div>
+          <div>
+            <small>Venue</small>
+            <strong>Subtle Class Event Centre</strong>
+          </div>
+        </div>
+
+        <p class="dress-note">Dress beautifully. Celebrate joyfully. Love wholeheartedly.</p>
+      </div>
+    </section>
+
+    <!-- Love story -->
+    <section id="story" class="story-section section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A journey written in love</p>
+        <h2>Our Love Story</h2>
+        <p>
+          How we got here.
+        </p>
+      </div>
+</p>
+      <div class="timeline">
+        <article class="story-card reveal">
+          <span class="story-number"></span>
+          <p class="story-year">SOMETIMES A SHARED PAST BECOMES THE FOUNDATION OF A SHARED FUTURE…</p>
+          <h3>How did we get here?</h3>
+          <p>The funny thing is, our story began long before we knew it.</p>
+          <p>We both attended St. Paul’s Lutheran School (SPLS) for our primary and junior high education. I was two years ahead of Helena, so although we shared the same school, we were never classmates or friends. Looking back, we sometimes wonder how many times we may have crossed paths without ever knowing that one day, we would become each other’s person.</p>
+          <p>Years passed. School became a memory, and life took us in different directions.</p>
+          <p>Then, on 31st March 2022, we found ourselves together again at the one-week observation of the mother of two old SPLS schoolmates and friends. Neither of us went that day expecting anything beyond supporting our friends and their family. And yet, somehow, I noticed Helena.</p>
+          <p>Before the day ended, we exchanged numbers. Nothing dramatic. Just two old schoolmates reconnecting.</p>
+          <p>After the funeral, however, something changed. We began talking more. Conversations became longer, friendship became affection, and affection quietly became love. Before long, we were calling each other “Bébé.” ❤️</p>
+          <p>And then came the proposal… well, according to me, it happened! 😂 According to Helena, my beautiful trainee lawyer, I have still not officially proposed. I have learnt not to argue with a trainee lawyer, so I shall simply do the needful. 💍😂</p>
+          <p>And here we are.</p>
+          <p>Looking back, we marvel at how God brought two people who had unknowingly shared the same school corridors years ago back into each other’s lives at exactly the right time.</p>
+          <p>Our story is a reminder that God’s timing is perfect. Sometimes love doesn’t arrive with fireworks. Sometimes, it begins quietly, waits patiently, and when the time is right, becomes everything.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery-section section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A few favourite moments</p>
+        <h2>Our Pictures</h2>
+        <p>Feel free to use any of our photos</p>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-tall reveal" data-image="assets/FH 1.jpeg" aria-label="Open picture one">
+          <img src="assets/FH 1.jpeg" alt="Francis and Helena gallery placeholder one" />
+        </button>
+        <button class="gallery-item gallery-tall reveal" data-image="assets/FH 2.jpeg" aria-label="Open picture one">
+          <img src="assets/FH 2.jpeg" alt="Francis and Helena gallery placeholder one" />
+        </button>
+        <button class="gallery-item gallery-tall reveal" data-image="assets/FH 5.jpeg" aria-label="Open picture one">
+          <img src="assets/FH 5.jpeg" alt="Francis and Helena gallery placeholder one" />
+        </button>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="rsvp-section section">
+      <div class="rsvp-wrap">
+        <div class="rsvp-copy reveal">
+          <p class="eyebrow light">Kindly respond</p>
+          <h2>Will you join us?</h2>
+          <p>
+            Please confirm your attendance and provide your contact details. Your table number will be shared
+            with you closer to the wedding.
+          </p>
+
+          <div class="rsvp-summary">
+            <span>31.10.2026</span>
+            <span>Subtle Class Event Centre</span>
+          </div>
+        </div>
+
+        <form id="rsvp-form" class="rsvp-form reveal">
+          <div class="form-row">
+            <label>
+              Full name *
+              <input id="full-name" name="full_name" type="text" autocomplete="name" required />
+            </label>
+
+            <label>
+              WhatsApp number *
+              <input
+                id="whatsapp"
+                name="whatsapp"
+                type="tel"
+                autocomplete="tel"
+                placeholder="+233..."
+                required
+              />
+            </label>
+          </div>
+
+          <label>
+            Email address *
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </label>
+
+          <div class="form-row">
+            <label>
+              Will you attend? *
+              <select id="attendance" name="attendance" required>
+                <option value="">Please select</option>
+                <option value="attending">Joyfully accepts</option>
+                <option value="not_attending">Regretfully declines</option>
+              </select>
+            </label>
+
+            <label>
+           
+          </div>
+
+          <label>
+            Message/Wishes for the Couple
+            <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
+          </label>
+
+          <label class="consent">
+            <input id="consent" type="checkbox" required />
+            <span>I consent to being contacted by email or WhatsApp about the wedding.</span>
+          </label>
+
+          <button id="submit-button" class="button button-gold" type="submit">
+            <span>Send RSVP</span>
+          </button>
+
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="brand footer-brand"><span>F</span><i>&</i><span>H</span></div>
+      <p>Francis & Helena · 31 October 2026</p>
+      <p class="footer-small">Designed by Meshel Pade</p>
+    </footer>
+  </main>
+
+  <!-- Gallery lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="close-lightbox" type="button" aria-label="Close picture">×</button>
+    <img id="lightbox-image" src="" alt="Expanded couple picture" />
+    <a id="download-photo" class="lightbox-download" href="" download>Download photo</a>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    document.querySelectorAll('.gallery-item').forEach((photo) => {
+      photo.addEventListener('click', () => {
+        const download = document.getElementById('download-photo');
+        download.href = photo.dataset.image;
+        download.download = photo.dataset.image.split('/').pop();
+      });
+    });
+  </script>
+</body>
+</html>
