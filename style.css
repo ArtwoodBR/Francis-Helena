@@ -705,6 +705,14 @@ h2 {
   font-size: 0.8rem;
 }
 
+.adults-only {
+  margin-bottom: 0.75rem;
+}
+
+.adults-only strong {
+  font-weight: 700;
+}
+
 .calendar-button {
   margin: 1.5rem 0 0.75rem;
 }
