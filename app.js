@@ -1,7 +1,7 @@
 // RSVP submissions are saved by /api/rsvp to the private Google Sheet.
 
-// Wedding date: 31 October 2026, 4:00 PM, Ghana time (UTC)
-const WEDDING_DATE = new Date("2026-10-31T16:00:00Z");
+// Wedding date: 31 October 2026, 3:00 PM, Ghana time (UTC)
+const WEDDING_DATE = new Date("2026-10-31T15:00:00Z");
 
 const envelopeScreen = document.getElementById("envelope-screen");
 const openEnvelopeButton = document.getElementById("open-envelope");
