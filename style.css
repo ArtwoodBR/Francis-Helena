@@ -705,6 +705,27 @@ h2 {
   font-size: 0.8rem;
 }
 
+.calendar-button {
+  margin: 1.5rem 0 0.75rem;
+}
+
+.rsvp-celebration {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.celebration-petal {
+  position: absolute;
+  top: 25%;
+  width: 7px;
+  height: 11px;
+  border-radius: 50% 0 50% 0;
+  opacity: 0;
+}
+
 .corner {
   position: absolute;
   width: 50px;

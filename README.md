@@ -19,3 +19,5 @@ The form collects full name, WhatsApp number, email, attendance, optional wishes
 - `assets/`: couple photographs and illustrations
 
 The older `supabase.sql` file is retained only as an unused historical reference; the active RSVP flow uses Google Sheets.
+
+Guests can download francis-helena-wedding.ics to add the confirmed start time to their calendar. Optional song requests are saved in the Google Sheet Message column, prefixed with 'Song request:'. A short decorative celebration appears only after a successful attending RSVP, unless reduced motion is enabled.

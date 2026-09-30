@@ -183,6 +183,27 @@ function validatePhone(number) {
   return /^\+?\d{9,15}$/.test(cleaned);
 }
 
+function celebrateRSVP() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const celebration = document.createElement('div');
+  celebration.className = 'rsvp-celebration';
+  celebration.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(celebration);
+  for (let i = 0; i < 20; i++) {
+    const petal = document.createElement('span');
+    petal.className = 'celebration-petal';
+    petal.style.left = `${20 + Math.random() * 60}%`;
+    petal.style.backgroundColor = ['#c49a45', '#f4e7d9', '#a94720'][i % 3];
+    celebration.appendChild(petal);
+    petal.animate([
+      { transform: 'translateY(0) rotate(0deg)', opacity: 0 },
+      { opacity: 0.85, offset: 0.15 },
+      { transform: `translate(${Math.random() * 100 - 50}px, 180px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+    ], { duration: 1600, delay: i * 30, easing: 'ease-out', fill: 'forwards' });
+  }
+  window.setTimeout(() => celebration.remove(), 2400);
+}
+
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   setFormStatus("");
@@ -194,6 +215,7 @@ form.addEventListener("submit", async (event) => {
   const email = document.getElementById("email").value.trim().toLowerCase();
   const attendance = document.getElementById("attendance").value;
   const message = document.getElementById("message").value.trim();
+  const song_request = document.getElementById("song-request").value.trim();
   const consent = document.getElementById("consent").checked;
 
   if (!validatePhone(whatsapp)) {
@@ -209,14 +231,15 @@ form.addEventListener("submit", async (event) => {
     const response = await fetch("/api/rsvp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ full_name: fullName, whatsapp, email, attendance, message, consent })
+      body: JSON.stringify({ full_name: fullName, whatsapp, email, attendance, message, song_request, consent })
     });
     const result = await response.json();
-    if (!response.ok) throw new Error(result.error || "Unable to save RSVP");
+    if (!response.ok || result.ok !== true) throw new Error(result.error || "Unable to save RSVP");
     form.reset();
     setFormStatus(attendance === "not_attending"
       ? "Thank you for letting us know. You will be missed."
       : "Thank you! Your RSVP has been received. Your table number will be shared later.", "success");
+    if (attendance === 'attending') celebrateRSVP();
   } catch (error) {
     console.error(error);
     setFormStatus("Your RSVP could not be saved. Please try again.", "error");

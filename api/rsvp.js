@@ -4,14 +4,17 @@ module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
-    const { full_name, whatsapp, email, attendance, message = '', consent } = req.body || {};
+    const { full_name, whatsapp, email, attendance, message = '', song_request = '', consent } = req.body || {};
     const name = String(full_name || '').trim();
     const phone = String(whatsapp || '').replace(/[^\d+]/g, '');
     const address = String(email || '').trim().toLowerCase();
     const note = String(message || '').trim();
+    const song = String(song_request || '').trim();
+    // Keep song requests in the existing private sheet's Message column.
+    const savedMessage = [note, song ? `Song request: ${song}` : ''].filter(Boolean).join('\n\n');
     if (!name || name.length > 150 || !/^\+?\d{9,15}$/.test(phone) ||
         !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(address) || address.length > 254 ||
-        !['attending', 'not_attending'].includes(attendance) || note.length > 2000 || consent !== true) {
+        !['attending', 'not_attending'].includes(attendance) || song.length > 200 || savedMessage.length > 2000 || consent !== true) {
       return res.status(400).json({ error: 'Please complete the required fields correctly.' });
     }
     const endpoint = process.env.RSVP_SCRIPT_URL;
@@ -20,7 +23,7 @@ module.exports = async function handler(req, res) {
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({ secret, full_name: name, whatsapp: phone, email: address, attendance, message: note, consent: true }),
+      body: JSON.stringify({ secret, full_name: name, whatsapp: phone, email: address, attendance, message: savedMessage, consent: true }),
       redirect: 'follow',
       signal: AbortSignal.timeout(15000)
     });

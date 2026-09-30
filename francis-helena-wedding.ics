@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Francis and Helena//Wedding Invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:francis-helena-20261031@francis-helena.vercel.app
+DTSTAMP:20260930T000000Z
+DTSTART:20261031T150000Z
+SUMMARY:Francis & Helena's Wedding
+LOCATION:Subtle Class Event Centre\, Ogbojo Koo Street\, Ghana
+DESCRIPTION:Dress code: Strictly Formal.\nEnd time to be confirmed.
+URL:https://francis-helena.vercel.app/
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
