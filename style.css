@@ -46,6 +46,17 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.venue-map-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.venue-map-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
 img {
   display: block;
   width: 100%;
