@@ -46,15 +46,21 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.venue-map-link {
+.venue-map-link,
+.clothing-inspiration {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
-.venue-map-link:focus-visible {
+.venue-map-link:focus-visible,
+.clothing-inspiration:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 4px;
+}
+
+.clothing-inspiration strong {
+  font-weight: 700;
 }
 
 img {
