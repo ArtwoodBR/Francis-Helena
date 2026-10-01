@@ -234,6 +234,14 @@ form.addEventListener("submit", async (event) => {
       body: JSON.stringify({ full_name: fullName, whatsapp, email, attendance, message, song_request, consent })
     });
     const result = await response.json();
+    if (response.status === 409) {
+      setFormStatus("An RSVP is already saved with this email or WhatsApp number. You do not need to submit again. If you need to change your response, please contact the couple.", "error");
+      return;
+    }
+    if (response.status === 400) {
+      setFormStatus("Please check your name, email, WhatsApp number and required fields, then try again.", "error");
+      return;
+    }
     if (!response.ok || result.ok !== true) throw new Error(result.error || "Unable to save RSVP");
     form.reset();
     setFormStatus(attendance === "not_attending"
