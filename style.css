@@ -646,9 +646,9 @@ h2 {
   width: min(100%, 850px);
   margin: auto;
   padding: clamp(3rem, 8vw, 7rem) clamp(1.5rem, 7vw, 6rem);
-  border: 1px solid var(--gold);
+  border: 0;
   text-align: center;
-  background: rgba(255,255,255,0.8);
+  background: #f8ead0 url("assets/invitation-floral-background.png") center / 100% 100% no-repeat;
   box-shadow: var(--shadow);
 }
 
@@ -701,8 +701,9 @@ h2 {
 
 .dress-note {
   margin-bottom: 0;
-  color: var(--muted);
+  color: var(--orange);
   font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .adults-only {
@@ -714,7 +715,15 @@ h2 {
 }
 
 .calendar-button {
-  margin: 1.5rem 0 0.75rem;
+  width: fit-content;
+  max-width: 100%;
+  justify-self: center;
+  margin: 1.5rem auto 0.75rem;
+  padding-inline: 1.5rem;
+}
+
+.invitation-card > .corner {
+  display: none;
 }
 
 .rsvp-celebration {
